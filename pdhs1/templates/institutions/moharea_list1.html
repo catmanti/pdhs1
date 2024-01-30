@@ -1,0 +1,19 @@
+<!-- institution/moharea_list.html -->
+<table class="table table-hover table-sm">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">District</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for moh_area in moh_areas %}
+        <tr>
+            <th scope="row">{{ moh_area.name }}</th>
+            <td>{{ moh_area.district }}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>

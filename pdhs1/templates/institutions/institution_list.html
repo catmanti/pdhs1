@@ -1,0 +1,31 @@
+{% extends "home/home_page.html" %}
+
+{% block content %}
+{% include "home/navbar.html" %}
+    <table class="table table-striped table-hover table-sm">
+  <thead>
+    <tr class="table-active">
+      <th scope="col">Institution Name</th>
+      <th scope="col">Sinhala Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">DS Division</th>
+      <th scope="col">MOH Area</th>
+      <th scope="col">Tel No</th>
+    </tr>
+  </thead>
+  <tbody>
+
+        {% for instituion in institution_list %}
+    <tr class="table-primary">
+      <th scope="row">{{instituion.name}}</th>
+      <td>{{instituion.name_si}}</td>
+      <td>{{instituion.type}}</td>
+      <td>{{instituion.ds_division}}</td>
+      <td>{{instituion.moh_area}}</td>
+      <td>{{instituion.telephone_nu}}</td>
+    </tr>
+        {% endfor %}
+
+  </tbody>
+</table>
+{% endblock %}
